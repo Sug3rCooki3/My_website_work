@@ -1,0 +1,46 @@
+/* Image Handling */
+.image-card {
+    padding: 0 !important;
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.exhibit-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-card:hover .exhibit-image {
+    transform: scale(1.1);
+}
+
+.mil-card .grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.mil-card .scanner-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #ff3333;
+    z-index: 3;
+    animation: scan 3s linear infinite;
+    box-shadow: 0 0 10px #ff3333;
+}
+
+@keyframes scan {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
