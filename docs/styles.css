@@ -151,3 +151,12 @@ h1 {
 .card-portfolio, .card-design, .card-client {
     background: #e0e5ec;
 }
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 20px;
+}
