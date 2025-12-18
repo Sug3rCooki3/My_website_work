@@ -8,8 +8,8 @@ This portfolio demonstrates versatility in web design and development through th
 
 1.  **Portfolio Site**
     *   **Theme**: AI Product Engineer Portfolio.
-    *   **Design Style**: **Hero Archetype / Game HUD**.
-    *   **Description**: A high-contrast, immersive portfolio featuring a "Mission" narrative, "Arsenal" of services, and a "Deploy" booking system. Includes Calendly integration and Zapier simulation.
+    *   **Design Style**: **Modern Developer / Hero Hybrid**.
+    *   **Description**: A sleek, dark-themed portfolio with a "Hero" narrative. Combines the "Elias" developer aesthetic (grid layout, purple accents) with "Hero Archetype" copy (Missions, Arsenal, Secure Comms). Includes Calendly integration.
 
 2.  **Design Style Site**
     *   **Theme**: Digital Museum Exhibit.
@@ -24,10 +24,11 @@ This portfolio demonstrates versatility in web design and development through th
 ## Recent Updates (December 2025)
 
 ### Portfolio Site Implementation
-*   **Full Build**: Created the complete "Hero" portfolio from scratch (`docs/portfolio/`).
-*   **Integrations**: Linked Calendly for appointment booking and simulated a Zapier webhook for lead capture.
+*   **Redesign**: Completely overhauled the design to a "Modern Developer" dark theme with purple accents (`docs/portfolio/`).
+*   **Structure**: Implemented a new grid-based layout for Projects and Skills.
+*   **Integrations**: Maintained Calendly integration for appointment booking.
 *   **Optimization**: Achieved high Lighthouse scores for Accessibility (100), SEO (100), and Best Practices.
-*   **Mobile**: Implemented a stacked, responsive layout for seamless mobile viewing.
+*   **Mobile**: Implemented a responsive layout with a custom hamburger menu.
 
 ### Mobile Responsiveness & UX
 *   **Client Site**: Added a smooth slide-out mobile drawer menu and fixed visual glitches (removed gray line).
