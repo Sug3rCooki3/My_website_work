@@ -498,3 +498,14 @@ a:focus, button:focus, .mobile-menu-btn:focus {
     }
     /* ... rest of media query ... */
 }
+
+.image-caption {
+ font-family: var(--font-body);
+ font-size: 0.8rem;
+ color: var(--text-color);
+ margin-top: 15px;
+ text-align: center;
+ opacity: 0.7;
+ letter-spacing: 1px;
+ text-transform: uppercase;
+}

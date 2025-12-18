@@ -1,54 +1,54 @@
-console.log("%c SYSTEM ONLINE: AI HERO PROTOCOL INITIATED", "color: #E63946; font-weight: bold; font-size: 16px; background: #0B132B; padding: 10px;");
+console.log("%c SYSTEM ONLINE: PORTFOLIO V2 INITIATED", "color: #C778DD; font-weight: bold; font-size: 16px; background: #282C33; padding: 10px; border: 1px solid #ABB2BF;");
 
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('leadMagnetForm');
-    
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const emailInput = form.querySelector('input[type="email"]');
-            const btn = form.querySelector('button');
-            const originalText = btn.innerText;
+    // Mobile Menu Toggle
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileBtn && navLinks) {
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
             
-            // Simulation of Zapier Webhook
-            btn.innerText = "TRANSMITTING...";
-            btn.style.opacity = "0.7";
-            btn.disabled = true;
-            
-            // Simulate network delay
-            setTimeout(() => {
-                console.log(`[ZAPIER WEBHOOK] Payload sent: { email: "${emailInput.value}", source: "portfolio_lead_magnet" }`);
-                
-                btn.innerText = "INTEL ACQUIRED";
-                btn.style.backgroundColor = "#4CAF50";
-                btn.style.color = "#fff";
-                btn.style.boxShadow = "0 0 15px rgba(76, 175, 80, 0.5)";
-                
-                emailInput.value = "";
-                
-                // Reset after 3 seconds
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.style.backgroundColor = "";
-                    btn.style.color = "";
-                    btn.style.boxShadow = "";
-                    btn.style.opacity = "1";
-                    btn.disabled = false;
-                }, 3000);
-                
-                alert("Intel sent to your secure inbox. (This is a simulation)");
-                
-            }, 1500);
+            // Animate hamburger to X
+            const spans = mobileBtn.querySelectorAll('span');
+            if (navLinks.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
         });
     }
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const spans = mobileBtn.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+    });
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 });
