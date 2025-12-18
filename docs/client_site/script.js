@@ -49,26 +49,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Mobile Menu Toggle (Simple implementation)
+    // Mobile Menu Toggle
     const menuToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelectorAll('.nav-links');
     
     if (menuToggle) {
         menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
             navLinks.forEach(linkGroup => {
-                if (linkGroup.style.display === 'flex') {
-                    linkGroup.style.display = 'none';
-                } else {
-                    linkGroup.style.display = 'flex';
-                    linkGroup.style.flexDirection = 'column';
-                    linkGroup.style.position = 'absolute';
-                    linkGroup.style.top = '70px';
-                    linkGroup.style.left = '0';
-                    linkGroup.style.width = '100%';
-                    linkGroup.style.backgroundColor = 'white';
-                    linkGroup.style.padding = '20px';
-                    linkGroup.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
-                }
+                linkGroup.classList.toggle('active');
+                // Clean up inline styles if they exist from previous versions
+                linkGroup.style = ''; 
+            });
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.forEach(group => group.classList.remove('active'));
             });
         });
     }

@@ -440,26 +440,105 @@ footer .container {
 @media (max-width: 768px) {
     .hud-nav {
         padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
     }
     
     .hud-links {
-        display: none; /* Simple hide for mobile for now */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-left: 0;
+    }
+
+    .hud-links a {
+        margin-left: 0;
+        font-size: 0.8rem;
     }
     
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        word-wrap: break-word;
+    }
+
+    .hero-sub {
+        font-size: 1rem;
+    }
+
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 140px;
+        padding-bottom: 3rem;
+    }
+
+    .grid-overlay {
+        height: 100%;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-btn {
+        width: 100%;
     }
     
     .mission-grid {
         grid-template-columns: 1fr;
     }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
     
+    .intel-box {
+        padding: 1.5rem;
+    }
+
     .intel-form {
         flex-direction: column;
+    }
+
+    .deploy-card {
+        padding: 2rem 1rem;
+    }
+
+    .progress-bar {
+        width: 100%;
     }
     
     footer .container {
         flex-direction: column;
         gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-links a {
+        margin-left: 0;
+    }
+
+    /* Fix for cut-off text */
+    p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .container {
+        padding: 0 1rem;
     }
 }

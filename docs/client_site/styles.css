@@ -347,21 +347,82 @@ footer {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    z-index: 101; /* Above the menu */
 }
 
 .mobile-menu-toggle span {
     width: 25px;
     height: 3px;
     background-color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+/* Hamburger Animation */
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
 }
 
 @media (max-width: 768px) {
     .main-nav {
-        padding: 20px;
+        padding: 15px 20px;
+        justify-content: space-between;
     }
 
     .nav-links {
-        display: none; /* Simple hide for now, JS would toggle */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 99; /* Below toggle, above content */
+        display: flex; /* Override the display:none from previous CSS if any */
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+        /* box-shadow removed to prevent line between stacked elements */
+    }
+    
+    /* Combine left and right links for mobile */
+    .nav-links.left, .nav-links.right {
+        display: flex; /* Ensure they are flex containers */
+    }
+    
+    /* We need to handle the split nav. 
+       Since the HTML has two .nav-links divs, we need to target them both.
+       A better approach for mobile is to stack them.
+    */
+    .nav-links.left {
+        top: 0;
+        height: 50vh;
+        justify-content: flex-end;
+        padding-bottom: 1rem;
+        transform: translateX(100%);
+    }
+    
+    .nav-links.right {
+        top: 50vh;
+        height: 50vh;
+        justify-content: flex-start;
+        padding-top: 1rem;
+        transform: translateX(100%);
+    }
+    
+    .nav-links.left.active, .nav-links.right.active {
+        transform: translateX(0);
     }
 
     .mobile-menu-toggle {
@@ -369,7 +430,11 @@ footer {
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+    
+    .hero-content {
+        padding: 0 1rem;
     }
 
     .booking-container {
