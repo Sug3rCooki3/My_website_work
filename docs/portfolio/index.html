@@ -2,11 +2,164 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Product Engineer | The Hero Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Plausible Analytics (Placeholder) -->
+    <script defer data-domain="yourdomain.com" src="https://plausible.io/js/script.js"></script>
+    
+    <!-- Calendly Widget CSS -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Portfolio Site</h1>
-    <p>Coming soon...</p>
-    <a href="../index.html">Back to Home</a>
+
+    <!-- HUD / Navigation -->
+    <nav class="hud-nav">
+        <div class="hud-logo">AI_HERO_SYSTEM</div>
+        <div class="hud-links">
+            <a href="#mission">MISSION</a>
+            <a href="#intel">INTEL</a>
+            <a href="#arsenal">ARSENAL</a>
+            <a href="#deploy" class="cta-link">INITIATE</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="grid-overlay"></div>
+        <div class="hero-content">
+            <div class="status-badge">SYSTEM STATUS: ONLINE</div>
+            <h1>DOMINATE YOUR MARKET WITH AI.</h1>
+            <p class="hero-sub">I don't just write code. I conquer complexity and weaponize data for your business victory.</p>
+            <div class="cta-group">
+                <button class="hero-btn primary" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/your-link'});return false;">START YOUR TRANSFORMATION</button>
+                <a href="#intel" class="hero-btn secondary">VIEW INTEL</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Social Proof (Band of Brothers) -->
+    <section class="social-proof">
+        <p>TRUSTED BY VISIONARIES AT</p>
+        <div class="logo-strip">
+            <div class="logo-placeholder">[COMPANY A]</div>
+            <div class="logo-placeholder">[COMPANY B]</div>
+            <div class="logo-placeholder">[COMPANY C]</div>
+            <div class="logo-placeholder">[COMPANY D]</div>
+        </div>
+    </section>
+
+    <!-- About Me (The Mission) -->
+    <section id="mission" class="mission-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>MISSION BRIEFING</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="mission-grid">
+                <div class="mission-text">
+                    <h3>THE AI HERO NARRATIVE</h3>
+                    <p>The world of AI is chaotic. You are facing an enemy of inefficiency and confusion. I am the guide who hands you the sword.</p>
+                    <p>[Insert Personal Bio Here: Describe your background, your specific skills, and why you are the right person to lead this mission. Focus on strength and competence.]</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">300%</span>
+                            <span class="stat-label">EFFICIENCY GAIN</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">$2M+</span>
+                            <span class="stat-label">REVENUE UNLOCKED</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mission-visual">
+                    <div class="hologram-box">
+                        <div class="scan-line"></div>
+                        <p>OPERATIVE PROFILE: [YOUR NAME]</p>
+                        <p>CLASS: AI ENGINEER</p>
+                        <p>RANK: COMMANDER</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services (The Arsenal) -->
+    <section id="arsenal" class="arsenal-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>DEPLOYMENT ARSENAL</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="cards-grid">
+                <div class="arsenal-card">
+                    <h3>OPERATIONAL INTELLIGENCE</h3>
+                    <p>Data analysis that turns noise into strategy.</p>
+                    <a href="../index.html" class="card-link">ACCESS MODULE ></a>
+                </div>
+                <div class="arsenal-card">
+                    <h3>AUTOMATION PROTOCOLS</h3>
+                    <p>Systems that run while you sleep. Defeat the grind.</p>
+                    <a href="../index.html" class="card-link">ACCESS MODULE ></a>
+                </div>
+                <div class="arsenal-card">
+                    <h3>CUSTOM AI WEAPONRY</h3>
+                    <p>Bespoke models trained on your specific data.</p>
+                    <a href="../index.html" class="card-link">ACCESS MODULE ></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Magnet (Reciprocity) -->
+    <section id="intel" class="intel-section">
+        <div class="container">
+            <div class="intel-box">
+                <div class="intel-content">
+                    <h2>DON'T GO INTO BATTLE EMPTY-HANDED.</h2>
+                    <p>Download "The AI Battlefield Guide" - A strategic blueprint for implementing AI without the casualties.</p>
+                    <form id="leadMagnetForm" class="intel-form">
+                        <input type="email" placeholder="ENTER EMAIL COORDINATES" required>
+                        <button type="submit" class="hero-btn primary">ACQUIRE INTEL</button>
+                    </form>
+                    <p class="privacy-note"><input type="checkbox" required> I agree to the privacy protocols.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scarcity & Booking (Deploy) -->
+    <section id="deploy" class="deploy-section">
+        <div class="container">
+            <div class="deploy-card">
+                <h2>MISSION CRITICAL: SLOTS LIMITED</h2>
+                <p>I partner with only <strong>3 visionary companies per quarter</strong> to ensure absolute mission success.</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 80%;">Q1 CAPACITY: 80% FULL</div>
+                </div>
+                <button class="hero-btn primary large" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/your-link'});return false;">INITIATE DEPLOYMENT SEQUENCE</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>SYSTEM TERMINATED. &copy; 2025 [YOUR NAME].</p>
+            <div class="footer-links">
+                <a href="#">GITHUB</a>
+                <a href="#">LINKEDIN</a>
+                <a href="#">TWITTER</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Calendly Script -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script src="script.js"></script>
 </body>
 </html>
