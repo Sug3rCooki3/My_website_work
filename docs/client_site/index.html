@@ -2,11 +2,149 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Client Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Salon | Sustainable Beauty & Care</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Client Site</h1>
-    <p>Coming soon...</p>
-    <a href="../index.html">Back to Home</a>
+
+    <!-- Top Promo Bar -->
+    <div class="promo-bar">
+        <p>✨ New Client Special: Get 15% off your first visit! ✨</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-links left">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+        </div>
+        <div class="logo">
+            <a href="#">Lumina Salon</a>
+        </div>
+        <div class="nav-links right">
+            <a href="#testimonials">Stories</a>
+            <a href="#contact" class="book-btn">Book Now</a>
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Care, comfort, confidence.</h1>
+            <p class="subheadline">YOUR SANCTUARY FOR SUSTAINABLE BEAUTY IN THE CITY</p>
+            <button id="cta-btn" class="primary-btn">Book Your Appointment</button>
+        </div>
+    </header>
+
+    <!-- Value Proposition / Intro -->
+    <section id="about" class="intro-section">
+        <div class="container">
+            <h2>We believe beauty is a feeling.</h2>
+            <p>At Lumina, we don't just style hair; we care for the person beneath it. Our sustainable, eco-friendly salon is designed to be a safe haven where you can relax, recharge, and reconnect with your best self.</p>
+        </div>
+    </section>
+
+    <!-- Services Showcase -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">✂️</div>
+                    <h3>Hair Artistry</h3>
+                    <p>Precision cuts and styling tailored to your unique face shape and lifestyle.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🎨</div>
+                    <h3>Organic Color</h3>
+                    <p>Ammonia-free, plant-based color treatments that protect your hair's health.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">💅</div>
+                    <h3>Nail Care</h3>
+                    <p>Non-toxic manicures and pedicures for a polished, healthy look.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🌿</div>
+                    <h3>Scalp Therapy</h3>
+                    <p>Rejuvenating treatments to nourish your scalp and promote growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section id="testimonials" class="social-proof-section">
+        <div class="container">
+            <h2>Loved by Locals</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"I've never felt so cared for in a salon. The atmosphere is incredibly calming, and my hair has never looked healthier."</p>
+                    <span class="author">- Sarah J.</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Lumina is my happy place. The staff listens to exactly what I want and the eco-friendly products smell amazing."</p>
+                    <span class="author">- Michael T.</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Finally, a salon that aligns with my values. Sustainable beauty without compromising on quality."</p>
+                    <span class="author">- Emily R.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sales Funnel / Lead Magnet -->
+    <section id="contact" class="booking-section">
+        <div class="booking-container">
+            <div class="booking-text">
+                <h2>Ready to Relax?</h2>
+                <p>Join our community and receive a <strong>complimentary deep conditioning treatment</strong> with your first booking.</p>
+            </div>
+            <form class="booking-form" id="bookingForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="service">Interested In</label>
+                    <select id="service">
+                        <option value="haircut">Hair Cut & Style</option>
+                        <option value="color">Color Treatment</option>
+                        <option value="nails">Manicure/Pedicure</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Request Appointment</button>
+                <p class="form-note">We'll contact you within 24 hours to confirm your time.</p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="../index.html">Back to Portfolio</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <p>&copy; 2025 Lumina Salon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
