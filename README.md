@@ -8,18 +8,35 @@ This portfolio demonstrates versatility in web design and development through th
 
 1.  **Portfolio Site**
     *   **Theme**: AI Product Engineer Portfolio.
-    *   **Design Style**: Swiss International Style.
-    *   **Description**: A clean, grid-based portfolio highlighting professional work and skills in AI engineering.
+    *   **Design Style**: **Hero Archetype / Game HUD**.
+    *   **Description**: A high-contrast, immersive portfolio featuring a "Mission" narrative, "Arsenal" of services, and a "Deploy" booking system. Includes Calendly integration and Zapier simulation.
 
 2.  **Design Style Site**
-    *   **Theme**: Educational Museum Piece.
-    *   **Design Style**: International Typographic Style.
-    *   **Description**: An educational site exploring the history and principles of the International Typographic Style (Swiss Style).
+    *   **Theme**: Digital Museum Exhibit.
+    *   **Design Style**: **Cyberpunk 2077 (Kitsch & Neo-Militarism)**.
+    *   **Description**: An interactive museum exploring the contrasting aesthetics of the Cyberpunk genre, featuring glitch effects, neon visuals, and mobile-responsive navigation.
 
 3.  **Client Site**
-    *   **Theme**: GreenLeaf Landscaping.
-    *   **Design Style**: Business/Sales Funnel.
-    *   **Description**: A commercial website designed for a landscaping business, featuring an integrated sales funnel to convert visitors into clients.
+    *   **Theme**: Lumina Salon.
+    *   **Design Style**: **Caregiver Archetype**.
+    *   **Description**: A soothing, sustainable beauty salon website designed to build trust. Features a mobile-responsive layout, service showcase, and lead generation forms.
+
+## Recent Updates (December 2025)
+
+### Portfolio Site Implementation
+*   **Full Build**: Created the complete "Hero" portfolio from scratch (`docs/portfolio/`).
+*   **Integrations**: Linked Calendly for appointment booking and simulated a Zapier webhook for lead capture.
+*   **Optimization**: Achieved high Lighthouse scores for Accessibility (100), SEO (100), and Best Practices.
+*   **Mobile**: Implemented a stacked, responsive layout for seamless mobile viewing.
+
+### Mobile Responsiveness & UX
+*   **Client Site**: Added a smooth slide-out mobile drawer menu and fixed visual glitches (removed gray line).
+*   **Design Style Site**: Implemented a custom Cyberpunk-themed hamburger menu with high-contrast focus states.
+*   **Global**: Ensured all text wraps correctly on small screens to prevent cut-offs.
+
+### Accessibility & SEO
+*   **Audit Fixes**: Addressed Lighthouse audit findings across all sub-projects.
+*   **Improvements**: Added `aria-labels`, improved color contrast ratios, defined image dimensions to prevent layout shifts (CLS), and added meta descriptions.
 
 ## Landing Page Design
 
