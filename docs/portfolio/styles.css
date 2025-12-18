@@ -1,6 +1,6 @@
 :root {
     --bg-color: #0B132B;
-    --primary-color: #E63946;
+    --primary-color: #ff4d5a; /* Brightened from #E63946 for better contrast on dark bg */
     --secondary-color: #1D3557;
     --text-color: #F1FAEE;
     --accent-color: #A8DADC;
@@ -104,8 +104,8 @@ body {
     display: inline-block;
     font-family: var(--font-ui);
     font-size: 0.8rem;
-    color: #4CAF50;
-    border: 1px solid #4CAF50;
+    color: #66bb6a; /* Brightened green for contrast */
+    border: 1px solid #66bb6a;
     padding: 0.2rem 0.5rem;
     margin-bottom: 1.5rem;
     background: rgba(76, 175, 80, 0.1);
@@ -365,6 +365,10 @@ section {
     border: 1px solid var(--secondary-color);
     color: var(--text-color);
     font-family: var(--font-ui);
+}
+
+.intel-form input::placeholder {
+    color: rgba(241, 250, 238, 0.7); /* High contrast placeholder */
 }
 
 .privacy-note {

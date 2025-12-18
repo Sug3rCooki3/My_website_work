@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Product Engineer Portfolio. I help businesses dominate their market with operational intelligence, automation protocols, and custom AI weaponry.">
     <title>AI Product Engineer | The Hero Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +19,7 @@
 <body>
 
     <!-- HUD / Navigation -->
-    <nav class="hud-nav">
+    <nav class="hud-nav" aria-label="Main Navigation">
         <div class="hud-logo">AI_HERO_SYSTEM</div>
         <div class="hud-links">
             <a href="#mission">MISSION</a>
@@ -28,6 +29,7 @@
         </div>
     </nav>
 
+    <main>
     <!-- Hero Section -->
     <header class="hero-section">
         <div class="grid-overlay"></div>
@@ -124,10 +126,15 @@
                     <h2>DON'T GO INTO BATTLE EMPTY-HANDED.</h2>
                     <p>Download "The AI Battlefield Guide" - A strategic blueprint for implementing AI without the casualties.</p>
                     <form id="leadMagnetForm" class="intel-form">
-                        <input type="email" placeholder="ENTER EMAIL COORDINATES" required>
+                        <label for="email-input" class="sr-only" style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;">Email Address</label>
+                        <input id="email-input" type="email" placeholder="ENTER EMAIL COORDINATES" required>
                         <button type="submit" class="hero-btn primary">ACQUIRE INTEL</button>
                     </form>
-                    <p class="privacy-note"><input type="checkbox" required> I agree to the privacy protocols.</p>
+                    <p class="privacy-note">
+                        <label style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; cursor: pointer;">
+                            <input type="checkbox" required> I agree to the privacy protocols.
+                        </label>
+                    </p>
                 </div>
             </div>
         </div>
@@ -146,6 +153,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <footer>
         <div class="container">

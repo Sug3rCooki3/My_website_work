@@ -4,7 +4,7 @@
     --neon-pink: #ff003c;
     --dark-bg: #0b0b0b;
     --panel-bg: #1a1a1a;
-    --text-color: #e0e0e0;
+    --text-color: #f0f0f0; /* Increased brightness for better contrast */
     
     --font-display: 'Orbitron', sans-serif;
     --font-body: 'Rajdhani', sans-serif;
@@ -360,6 +360,11 @@ footer {
     top: 20px;
     right: 20px;
     z-index: 1001;
+    /* Accessibility improvements */
+    min-width: 48px;
+    min-height: 48px;
+    justify-content: center;
+    align-items: center;
 }
 
 .mobile-menu-btn span {
@@ -473,7 +478,23 @@ footer {
 }
 
 /* Focus States for Accessibility */
-a:focus, button:focus {
+a:focus, button:focus, .mobile-menu-btn:focus {
     outline: 2px solid var(--neon-yellow);
     outline-offset: 4px;
+}
+
+/* Ensure tap targets are large enough */
+.mobile-menu-btn {
+    min-width: 48px;
+    min-height: 48px;
+    display: none; /* Hidden by default, shown in media query */
+    justify-content: center; /* Center the spans */
+    padding: 12px; /* Add padding to increase hit area */
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+    /* ... rest of media query ... */
 }
