@@ -3,3 +3,6 @@ node_modules
 .lhci
 .lighthouseci/
 .vscode/
+
+docs/portfolio/images/
+docs/design_style/images/
